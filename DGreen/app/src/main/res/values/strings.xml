@@ -11,4 +11,7 @@
     <string name="not_having_account">Not Having an Account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="logout">Logout</string>
+    <string name="_first">Halaman Pertama</string>
+    <string name="_second">Halaman kedua</string>
+    <string name="_third">Halaman ketiga</string>
 </resources>

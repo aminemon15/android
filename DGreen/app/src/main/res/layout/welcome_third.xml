@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#EF6C00"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_restaurant_menu_black_24dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:layout_marginTop="32.0dp"
+            android:textAlignment="center"
+            android:text="EAT FROM THE BEST RESTAURANTS"
+            android:textColor="#FFFFFF"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="32.0dp"
+            android:textAlignment="center"
+            android:text="Access all the best restaurant around you and enjoy their cuisine at home..."
+            android:textColor="#44EED4"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

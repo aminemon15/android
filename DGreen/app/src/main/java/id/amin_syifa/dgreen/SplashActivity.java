@@ -18,10 +18,10 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this,WelcomeActivity.class));
+                startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
             }
         };
         Timer timer = new Timer("Pindah Halaman");
         timer.schedule(task,3000);
+        }
     }
-}

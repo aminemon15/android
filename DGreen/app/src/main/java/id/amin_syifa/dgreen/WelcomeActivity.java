@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import id.amin_syifa.dgreen.adapter.WelcomeAdapter;
+
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -28,7 +30,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void setViewPager(){
-        viewPager = findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewpager);
         viewPager.setAdapter(new WelcomeAdapter(this));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
