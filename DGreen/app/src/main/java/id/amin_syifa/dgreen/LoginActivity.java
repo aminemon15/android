@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private String username;
     private String password;
     private ProgressDialog pDialog;
-    private String login_url = "http://192.168.43.219/DGreen/login.php";
+    private String login_url = "http://192.168.43.219/dgreen/login.php";
     private SessionHandler session;
 
     @Override
@@ -47,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Button register = findViewById(R.id.btnLoginRegister);
         Button login = findViewById(R.id.btnLogin);
+        ImageView back = findViewById(R.id.btnBack);
 
         //Launch Registration screen when Register Button is clicked
         register.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +71,16 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, SplashActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
     }
 
     /**

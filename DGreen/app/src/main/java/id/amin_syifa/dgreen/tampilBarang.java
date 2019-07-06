@@ -39,13 +39,13 @@ public class tampilBarang extends AppCompatActivity implements View.OnClickListe
 
         id = intent.getStringExtra(konfigurasi.BARANG_ID);
 
-        editTextId = (EditText) findViewById(R.id.editTextId);
-        editTextKode = (EditText) findViewById(R.id.editTextKode);
-        editTextNama = (EditText) findViewById(R.id.editTextNama);
-        editTextSatuan = (EditText) findViewById(R.id.editTextSatuan);
+        editTextId = findViewById(R.id.editTextId);
+        editTextKode = findViewById(R.id.editTextKode);
+        editTextNama = findViewById(R.id.editTextNama);
+        editTextSatuan = findViewById(R.id.editTextSatuan);
 
-        buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
-        buttonDelete = (Button) findViewById(R.id.buttonDelete);
+        buttonUpdate = findViewById(R.id.buttonUpdate);
+        buttonDelete = findViewById(R.id.buttonDelete);
 
         buttonUpdate.setOnClickListener(this);
         buttonDelete.setOnClickListener(this);
@@ -172,7 +172,7 @@ public class tampilBarang extends AppCompatActivity implements View.OnClickListe
 
     private void confirmDeleteEmployee(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Apakah Kamu Yakin Ingin Menghapus Pegawai ini?");
+        alertDialogBuilder.setMessage("Apakah Kamu Yakin Ingin Menghapus Barang ini.?");
 
         alertDialogBuilder.setPositiveButton("Ya",
                 new DialogInterface.OnClickListener() {

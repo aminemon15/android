@@ -12,11 +12,6 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
-/**
- * Created by muhammadyusuf on 01/19/2017.
- * kodingindonesia
- */
-
 public class tambahActivity extends AppCompatActivity implements View.OnClickListener{
     //Dibawah ini merupakan perintah untuk mendefinikan View
         private EditText editTextKode;

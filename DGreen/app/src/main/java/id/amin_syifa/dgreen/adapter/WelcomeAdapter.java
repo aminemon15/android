@@ -9,44 +9,42 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import id.amin_syifa.dgreen.models.WelcomeModel;
-
 public class WelcomeAdapter extends PagerAdapter {
+  private Context mContext;
 
-    private Context mContext;
+  public WelcomeAdapter(Context context) {
+    mContext = context;
+  }
 
-    public WelcomeAdapter(Context context){
-        mContext = context;
-    }
+  @NonNull
+  @Override
+  public Object instantiateItem(@NonNull ViewGroup container, int position) {
+    WelcomeModel welcomeModel = WelcomeModel.values()[position];
+    LayoutInflater inflater = LayoutInflater.from(mContext);
+    ViewGroup layout = (ViewGroup) inflater.inflate(welcomeModel.getLayoutResId(),container,false);
+    container.addView(layout);
+    return layout;
+  }
 
-    @NonNull
-    @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position){
-        WelcomeModel welcomeModel = WelcomeModel.values()[position];
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        ViewGroup layout = (ViewGroup) inflater.inflate(welcomeModel.getmLayoutResId(),container,false);
-        container.addView(layout);
-        return layout;
-    }
+  @Override
+  public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+    container.removeView((View)object);
+  }
 
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View) object);
-    }
+  @Override
+  public int getCount() {
+    return WelcomeModel.values().length;
+  }
 
-    @Override
-    public int getCount(){
-        return WelcomeModel.values().length;
-    }
+  @Override
+  public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
+    return view == o;
+  }
 
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object o){
-        return view == o;
-    }
-
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int posisiotn){
-        WelcomeModel welcomeModel = WelcomeModel.values()[posisiotn];
-        return mContext.getString(welcomeModel.getmTitleResId());
-    }
+  @Nullable
+  @Override
+  public CharSequence getPageTitle(int position) {
+    WelcomeModel welcomeModel = WelcomeModel.values()[position];
+    return  mContext.getString(welcomeModel.getTitleResId());
+  }
 }

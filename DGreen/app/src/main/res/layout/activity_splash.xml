@@ -6,24 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
 
-    <ImageView
-        android:layout_width="183dp"
-        android:layout_height="134dp"
-        android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher" />
+  <ImageView
+      android:layout_width="183dp"
+      android:layout_height="134dp"
+      android:layout_centerInParent="true"
+      android:src="@mipmap/ic_launcher" />
 
-    <TextView
-        android:text="Selamat Datang di Aplikasi D'Green"
-        android:layout_marginBottom="60.0dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:text="Versi 1.0.0"
-        android:layout_marginBottom="20.0dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <TextView
+      android:text="Selamat Datang di Aplikasi D'Green"
+      android:layout_marginBottom="60.0dp"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <TextView
+      android:text="Versi 1.0.0"
+      android:layout_marginBottom="20.0dp"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
 </RelativeLayout>

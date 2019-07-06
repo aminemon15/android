@@ -28,13 +28,13 @@ public class TampilSemuaBarang extends AppCompatActivity implements ListView.OnI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tampil_semua_barang);
-        listView = (ListView) findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         listView.setOnItemClickListener(this);
         getJSON();
     }
 
 
-    private void showEmployee(){
+    private void tampilBarang(){
         JSONObject jsonObject = null;
         ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String, String>>();
         try {
@@ -44,12 +44,12 @@ public class TampilSemuaBarang extends AppCompatActivity implements ListView.OnI
             for(int i = 0; i<result.length(); i++){
                 JSONObject jo = result.getJSONObject(i);
                 String id = jo.getString(konfigurasi.TAG_ID);
-                String name = jo.getString(konfigurasi.TAG_NAMA);
+                String nama = jo.getString(konfigurasi.TAG_NAMA);
 
-                HashMap<String,String> employees = new HashMap<>();
-                employees.put(konfigurasi.TAG_ID,id);
-                employees.put(konfigurasi.TAG_NAMA,name);
-                list.add(employees);
+                HashMap<String,String> barang = new HashMap<>();
+                barang.put(konfigurasi.TAG_ID,id);
+                barang.put(konfigurasi.TAG_NAMA,nama);
+                list.add(barang);
             }
 
         } catch (JSONException e) {
@@ -79,7 +79,7 @@ public class TampilSemuaBarang extends AppCompatActivity implements ListView.OnI
                 super.onPostExecute(s);
                 loading.dismiss();
                 JSON_STRING = s;
-                showEmployee();
+                tampilBarang();
             }
 
             @Override
