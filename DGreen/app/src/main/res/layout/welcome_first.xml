@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/dgreen"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32.0dp"
+            android:text="SELAMAT DATANG"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:typeface="normal"
+            app:fontFamily="@font/autour_one" />
+
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dp"
+            android:text="Lewat aplikasi kita hijaukan Bumi"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:fontFamily="@font/baloo_thambi" />
+    </LinearLayout>
+</RelativeLayout>
